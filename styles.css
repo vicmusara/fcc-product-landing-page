@@ -1,0 +1,114 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #181618;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    width: 100%;
+
+    position: sticky;
+}
+
+#nav-bar{
+    display: flex;
+    padding: 1rem 0.5rem;
+    margin-left: 5px;
+    margin-right: 5px;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 0 0;
+    border-radius: 4rem;
+    background: #F7FFFB;
+    font-family: Lato, sans-serif;
+    color: #1D1A1C;
+}
+
+.nav-link{
+    color: #1D1A1C;
+}
+
+.brand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+    left: 36rem;
+    bottom: 0.8125rem;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 150%;
+}
+
+.nav-left, .nav-right{
+    display: flex;
+    padding: 0 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 1.2rem */
+
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+#Welcome h1{
+    max-width: 100%;
+    align-self: stretch;
+    color: #F7FFFB;
+    text-overflow: ellipsis;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 110%; /* 7.425rem */
+    letter-spacing: -0.0675rem;
+    margin-bottom: 1rem;
+
+}
+
+#Welcome p{
+    align-self: stretch;
+    color: #D0DBD6;
+    font-family: Lato, sans-serif;
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 1.925rem */
+    margin-top: 5px;
+}
+
+#shop-now{
+    max-width: 48ch;
+    min-width: 22.5rem;
+    padding: 1rem 3rem;
+    background: #00A795;
+    border: none;
+    color: #F7FFFB;
+    text-align: center;
+    font-family: Lato, sans-serif;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 1.6875rem */
+}
+
+#Welcome h1, #Welcome p, #shop-now{
+    margin-left: 1.5rem;
+}
+
+figure img{
+    width: 100%;
+    object-fit: cover;
+}
