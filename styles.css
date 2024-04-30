@@ -4,10 +4,10 @@ body {
     background: #181618;
     width: 100vw;
     display: grid;
-    grid-template-rows:  80vh 80vh 80vh 80vh;
+    grid-template-rows:  80vh 80vh 80vh 100vh;
     grid-template-columns: 1fr;
     grid-template-areas: "a" "b" "c" "d";
-    gap: 10rem;
+    gap: 150px;
 }
 
 #Welcome{
@@ -74,6 +74,11 @@ body {
     background: #F7FFFB;
     font-family: Lato, sans-serif;
     color: #1D1A1C;
+    box-shadow: black 0 0.5rem 0.5rem -0.5rem;
+}
+
+img, figure{
+    box-shadow: black 0 0.5rem 0.5rem -0.5rem;
 }
 
 .nav-link{
@@ -120,18 +125,39 @@ a{
     gap: 1.5rem;
 }
 
-
+#Collections h1{
+    color: #F7FFFB;
+    text-align: center;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 120%; /* 4.2rem */
+}
 
 #Collections figure{
-    width: 100%;
-    height: 100%;
-    border: red 1px solid;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 20rem;
+    width: 22.5rem;
+    color: #D0DBD6;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+.caption-heading{
+    overflow: hidden;
+    color: #F7FFFB;
+    text-align: center;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 1.6875rem */
 }
 
 #Collections figure img{
@@ -165,13 +191,6 @@ a{
     grid-area: quality-cap6;
 }
 
-#Collections figure{
-    height: 20rem;
-    width: 22.5rem;
-}
-
-
-
 #shop-now{
     max-width: 48ch;
     min-width: 22.5rem;
@@ -188,10 +207,16 @@ a{
 }
 
 #Welcome h1, #Welcome p, #shop-now{
-    margin-left: 1.5rem;
+    margin-left: 2rem;
 }
 
-
+#figure{
+    font-family: Lato, sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+}
 
 #Partners{
     grid-area: c;
@@ -202,21 +227,60 @@ a{
     gap: 1rem;
     align-items: center;
     justify-items: center;
+    background: #FFF;
 }
 
 #Partners figure{
     width: 15rem;
     height: 100%;
-    border: red 1px solid;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color:#D0DBD6; ;
 }
 
 .partners-heading{
     grid-area:p-heading;
     text-align: center;
+}
+
+.partners-heading h1{
+    font-family: Inter, sans-serif;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    color: #18181B;
+    margin: 2px;
+}
+
+.partners-heading p{
+    color: #71717A;
+    text-align: center;
+    font-family: Inter, sans-serif;
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.partners-caption-heading{
+    font-family: Inter, sans-serif;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    color: #18181B;
+}
+
+.partners-caption-text{
+    font-family: Inter, sans-serif;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    color: #71717A
 }
 
 #partner-1{
@@ -249,10 +313,15 @@ a{
     grid-area: d;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr 0.8fr 2rem;
+    grid-template-rows: 0.7fr 0.3fr 0.1fr;
     grid-template-areas: "splash splash Franchise Franchise Franchise"
     "bliss quick-links our-coffee contact-us follow-us"
     "footer footer footer footer footer";
+    padding-left: 3rem;
+    padding-right: 3rem;
+    width: 60vw;
+    margin: 0 auto;
+    background-color: rgba(253, 253, 253, 0.05)
 }
 
 #splash{
@@ -261,6 +330,7 @@ a{
     height: 27rem;
     border-radius: 50%;
     overflow: hidden;
+    margin-left: 0;
 }
 
 #splash-cup{
@@ -271,10 +341,41 @@ a{
 #Franchise{
     grid-area: Franchise;
 }
+
+#Franchise h1{
+    font-family: "Playfair Display", sans-serif;
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 120%;
+    color: #F7FFFB;
+}
+
+#Franchise p{
+    color: #D0DBD6;
+
+    font-family: Lato, sans-serif;
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.bliss, .quick-links, .our-coffee, .contact-us, .follow-us{
+    color: #F7FFFB;
+}
+
+.bliss h2, .quick-links h3, .our-coffee h3, .contact-us h3, .follow-us h3{
+    font-family: Manrope, sans-serif;
+    padding-top: 0;
+}
 .bliss{
     grid-area: bliss;
 }
 
+.bliss h2{
+    margin-top: 13px;
+}
 .quick-links{
     grid-area: quick-links;
 }
@@ -293,6 +394,73 @@ a{
 
 footer{
     grid-area: footer;
-    display: flex;
+    position: relative;
+    color:#F7FFFB;
 }
 
+#email{
+    border-radius: 0.25rem;
+    border: 1px solid #41393E;
+    background: #181618;
+    min-width: 8.75rem;
+    max-width: 20.25rem;
+    padding: 1rem 1.5rem;
+}
+
+#submit{
+    border-radius: 0.25rem;
+    border: 1px solid #41393E;
+    min-width: 8.75rem;
+    width: 13.25rem;
+    padding: 1rem 1.5rem;
+    background: #00A795;
+    color: #F7FFFB;
+}
+
+#submit:hover{
+    cursor: pointer;
+    background: #F7FFFB;
+    color: #00A795;
+    transition: 0.5s;
+}
+
+.line-break{
+    height: 1px;
+}
+
+.socials-icons{
+   position: absolute;
+    top: 0;
+    right: 120px;
+}
+
+#socials p{
+    top: 0;
+
+}
+
+a{
+    color: #F7FFFB;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #00A795;
+    transition: 0.5s;
+}
+
+@media only screen and (max-width: 600px) {
+    body{
+        width: 100vw;
+        height: auto;
+    }
+    #Welcome, #Collections, #Partners, #Contact{
+        height: 100vh;
+        display: flex;
+    }
+
+    #Contact{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
