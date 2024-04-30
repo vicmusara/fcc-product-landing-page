@@ -1,16 +1,65 @@
-body{
+body {
     margin: 0;
     padding: 0;
     background: #181618;
     width: 100vw;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows:  80vh 80vh 80vh 80vh;
+    grid-template-columns: 1fr;
+    grid-template-areas: "a" "b" "c" "d";
+    gap: 10rem;
 }
 
-.header{
+#Welcome{
+    grid-area: a;
+    position: relative;
     width: 100%;
+    height: 100vh; /* Adjust height as needed */
+    overflow: hidden;
+}
 
-    position: sticky;
+#header{
+    width: 100%;
+    position: fixed;
+    top: 1rem;
+    z-index: 1000;
+}
+
+#video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#Welcome h1{
+    max-width: 100%;
+    align-self: stretch;
+    color: #F7FFFB;
+    text-overflow: ellipsis;
+    font-family: "Playfair Display", sans-serif;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 110%; /* 7.425rem */
+    letter-spacing: -0.0675rem;
+    margin-bottom: 1rem;
+    margin-top: 15rem;
+
+}
+
+#Welcome p{
+    align-self: stretch;
+    color: #D0DBD6;
+    font-family: Lato, sans-serif;
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 1.925rem */
+    margin-top: 5px;
 }
 
 #nav-bar{
@@ -62,32 +111,66 @@ a{
 }
 
 
-
-#Welcome h1{
-    max-width: 100%;
-    align-self: stretch;
-    color: #F7FFFB;
-    text-overflow: ellipsis;
-    font-family: "Playfair Display", sans-serif;
-    font-size: 4rem;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 110%; /* 7.425rem */
-    letter-spacing: -0.0675rem;
-    margin-bottom: 1rem;
-
+#Collections{
+    grid-area: b;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: ". quality ." "quality-cap1 quality-cap2 quality-cap3" "quality-cap4 quality-cap5 quality-cap6";
+    gap: 1.5rem;
 }
 
-#Welcome p{
-    align-self: stretch;
-    color: #D0DBD6;
-    font-family: Lato, sans-serif;
-    font-size: 1.375rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%; /* 1.925rem */
-    margin-top: 5px;
+
+
+#Collections figure{
+    width: 100%;
+    height: 100%;
+    border: red 1px solid;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+#Collections figure img{
+        width: 100%; /* Ensure the image fills the parent box horizontally */
+        height: 14rem; /* Ensure the image fills the parent box vertically */
+        object-fit: cover;
+}
+#quality{
+    grid-area: quality;
+    text-align: center;
+}
+
+#quality-cap1{
+    grid-area: quality-cap1;
+    display: flex;
+    flex-direction: column;
+}
+#quality-cap2{
+    grid-area: quality-cap2;
+}
+#quality-cap3{
+    grid-area: quality-cap3;
+}
+#quality-cap4{
+    grid-area: quality-cap4;
+}
+#quality-cap5{
+    grid-area: quality-cap5;
+}
+#quality-cap6{
+    grid-area: quality-cap6;
+}
+
+#Collections figure{
+    height: 20rem;
+    width: 22.5rem;
+}
+
+
 
 #shop-now{
     max-width: 48ch;
@@ -108,7 +191,108 @@ a{
     margin-left: 1.5rem;
 }
 
-figure img{
+
+
+#Partners{
+    grid-area: c;
+    display: grid;
+    grid-template-rows:  auto 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: ". . p-heading . ." ". i j k . " ". m n o .";
+    gap: 1rem;
+    align-items: center;
+    justify-items: center;
+}
+
+#Partners figure{
+    width: 15rem;
+    height: 100%;
+    border: red 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.partners-heading{
+    grid-area:p-heading;
+    text-align: center;
+}
+
+#partner-1{
+    grid-area: i;
+
+}
+
+#partner-2{
+    grid-area: j;
+}
+
+#partner-3{
+    grid-area: k;
+}
+
+#partner-4{
+    grid-area: m;
+}
+
+#partner-5{
+    grid-area:n;
+}
+
+#partner-6{
+  grid-area: o;
+}
+
+
+#Contact{
+    grid-area: d;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 1fr 0.8fr 2rem;
+    grid-template-areas: "splash splash Franchise Franchise Franchise"
+    "bliss quick-links our-coffee contact-us follow-us"
+    "footer footer footer footer footer";
+}
+
+#splash{
+    grid-area: splash;
+    width: 27rem;
+    height: 27rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#splash-cup{
     width: 100%;
+    height: 100%;
     object-fit: cover;
 }
+#Franchise{
+    grid-area: Franchise;
+}
+.bliss{
+    grid-area: bliss;
+}
+
+.quick-links{
+    grid-area: quick-links;
+}
+
+.our-coffee{
+    grid-area: our-coffee;
+}
+
+.contact-us{
+    grid-area: contact-us;
+}
+
+.follow-us{
+    grid-area: follow-us;
+}
+
+footer{
+    grid-area: footer;
+    display: flex;
+}
+
